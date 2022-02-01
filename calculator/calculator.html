@@ -1,0 +1,73 @@
+<head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.10.1/dist/css/uikit.min.css" />
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<header>
+  <img src="images/zungurioneko.png" alt="">
+  <h1>電卓を作ってみよう!</h1>
+</header>
+
+<div id="wrap">
+<div class="uk-alert-primary" uk-alert style="height: 30px">
+
+</div>
+<table class="uk-table uk-table-small uk-table-divider">
+  <tr>
+    <td colspan="4" class="result"><p id="display"></p></td>
+  </tr>
+  <tr>
+    <td class="number">1</td>
+    <td class="number">2</td>
+    <td class="number">3</td>
+    <td class="number ope">+</td>
+  </tr>
+  <tr>
+    <td class="number">4</td>
+    <td class="number">5</td>
+    <td class="number">6</td>
+    <td class="number ope">-</td>
+  </tr>
+  <tr>
+    <td class="number">7</td>
+    <td class="number">8</td>
+    <td class="number">9</td>
+    <td id="d">D</td>
+  </tr>
+  <tr>
+    <td class="number">0</td>
+     <td class="number">00</td>
+    <td id="eq">=</td>
+    <td class="clear">C</td>
+  </tr>
+</table>
+</div>
+
+<script>
+  document.addEventListener('click', function(event){
+  if (event.target.matches('#d')) {
+      var d = document.getElementById('display').innerText.slice(0, -1);
+      document.getElementById('display').innerText = d;
+      return;
+    }
+
+  if (event.target.matches('#eq')) {
+      var calcResult = eval(document.getElementById('display').innerText);
+      document.getElementById('display').innerText = calcResult;
+      return;
+    }
+
+    if (event.target.matches('.clear')) {
+      document.getElementById('display').innerText = '';
+      return;
+    }
+
+    if (!event.target.matches('.number')) return;
+
+    var clickNumber = event.target.innerText;
+    var beforeClickNumber = document.getElementById('display').innerText;
+
+    document.getElementById('display').innerText = beforeClickNumber + clickNumber;
+    
+  });
+
+</script>
