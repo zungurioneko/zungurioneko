@@ -1,0 +1,72 @@
+@charset "utf-8";
+
+h1 {
+  text-align: center;
+  padding-top: 27.5px;
+  color: black;
+  margin-top: 0;
+}
+
+header {
+  background-color: cccccc;
+  height: 100px;
+  margin-top: 0;
+}
+
+img {
+  height: 100px;
+  float: left;
+  width: 100px;
+}
+
+#wrap {
+  width: 500px;
+  display: flex;
+  justify-content: center;
+  margin: 50px auto;
+
+}
+
+#display {
+  width: 100%;
+  height: 80px;
+  display: block;
+  text-align: right;
+  font-size: 50px;
+  color: #cccccc;
+}
+
+table {
+  color: black;
+  border: solid 2px;
+  font-weight: bold;
+  text-align: center;
+}
+
+table td {
+  border: solid 2px;
+}
+
+.clear {
+  background-color: orange;
+}
+
+#d {
+  background-color: orange;
+}
+
+.result {
+  background-color: #464646;
+}
+
+.number {
+  background-color: cccccc;
+}
+
+.ope {
+  background-color: orange;
+}
+
+#eq {
+  background-color: cccccc;
+}
